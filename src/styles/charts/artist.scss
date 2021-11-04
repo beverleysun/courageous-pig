@@ -4,10 +4,11 @@
   display: flex;
   position: relative;
   width: 100%;
-  height: 50px;
-  transition: ease-out 0.2s;
+  height: $artist-row-height;
+  transition: ease-in-out 0.2s;
   background-color: $row-color;
   border-radius: $border-radius;
+  overflow: hidden;
 
   &.expanded {
     height: 200px;
@@ -23,24 +24,25 @@
     right: 0;
     align-items: center;
     column-gap: $spacing-md;
-    padding-left: calc(50px + $spacing-md);
+    padding-left: calc($artist-row-height + $spacing-md);
     padding-right: $spacing-md;
     width: 100%;
-    height: 50px;
+    height: $artist-row-height;
+    z-index: 1;
 
     &:hover {
       cursor: pointer;
     }
 
     .arrow-expand {
-      transition: ease-out 0.2s;
+      transition: ease-in-out 0.2s;
     }
 
     .collapsed-ranking {
       display: flex;
       width: 70px;
       align-items: center;
-      transition: opacity ease-out 0.1s;
+      transition: opacity ease-in-out 0.1s;
 
       .ranking {
         width: 40px;
@@ -77,10 +79,6 @@
         display: none;
       }
     }
-
-    @media (max-width: $breakpoint-mobile) {
-      padding-left: $spacing-md;
-    }
   }
 
   .photo {
@@ -89,20 +87,22 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    .photo {
-      height: 0;
-    }
-
     .row-info {
       .artist-name {
         min-width: unset;
       }
     }
+  }
 
-    &.expanded {
-      .photo {
-        height: clamp(0px, 100%, 85px);
-      }
+  .expanded-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding-top: $artist-row-height;
+
+    .ranking {
+      padding-left: 150px;
     }
   }
 }

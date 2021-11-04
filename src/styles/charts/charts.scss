@@ -3,6 +3,7 @@
 .controls {
   display: flex;
   justify-content: space-between;
+  margin-bottom: $spacing-md;
 
   .search {
     display: flex;
@@ -32,4 +33,11 @@
       align-items: unset;
     }
   }
+}
+
+.artists {
+  display: flex;
+  flex-direction: column;
+  row-gap: $spacing-xsm;
+  flex: 1;
 }
