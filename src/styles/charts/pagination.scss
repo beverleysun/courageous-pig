@@ -2,6 +2,8 @@
 .pagination-container {
   display: flex;
   column-gap: $spacing-md;
+  background-color: $background-color;
+  z-index: 3;
 
   .disabled-link {
     pointer-events: none;
@@ -23,9 +25,8 @@
 
   &.mobile {
     display: none;
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    left: 0;
     width: 100%;
     justify-content: space-between;
     padding: $spacing-md $content-inset-lg;

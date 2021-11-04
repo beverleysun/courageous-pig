@@ -1,6 +1,11 @@
 @import "./global.scss";
 
 .root-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: $content-inset-lg;
+
   .header {
     margin-bottom: $spacing-lg;
 
@@ -18,5 +23,13 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $content-inset-md;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $content-inset-sm;
   }
 }

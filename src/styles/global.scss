@@ -13,15 +13,6 @@ html {
   background-color: $background-color;
   display: flex;
   justify-content: center;
-  padding: $content-inset-lg;
-
-  @media (max-width: $breakpoint-tablet) {
-    padding: $content-inset-md;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: $content-inset-sm;
-  }
 }
 
 body {
