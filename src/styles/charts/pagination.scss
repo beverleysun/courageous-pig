@@ -1,0 +1,47 @@
+@import "../global.scss";
+.pagination-container {
+  display: flex;
+  column-gap: $spacing-md;
+
+  .disabled-link {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: 600;
+    row-gap: $spacing-sm;
+    text-align: center;
+
+    svg {
+      height: 0.7rem;
+    }
+  }
+
+  &.mobile {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: $spacing-md $content-inset-lg;
+    box-shadow: $box-shadow;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: flex;
+      padding: $content-inset-md;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: $content-inset-sm;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

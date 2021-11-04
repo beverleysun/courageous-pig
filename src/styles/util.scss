@@ -8,7 +8,17 @@ $spacing-sm: 5px;
 $spacing-md: 15px;
 $spacing-lg: 30px;
 
+// Content inset
+$content-inset-sm: 20px;
+$content-inset-md: 30px;
 $content-inset-lg: 60px;
 
 // Border radius
 $border-radius: 5px;
+
+// Screen size breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+// Box shadow
+$box-shadow: rgba(0, 0, 0, 0.6) 0px 7px 29px 0px;

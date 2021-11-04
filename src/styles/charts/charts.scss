@@ -1,0 +1,35 @@
+@import "../global.scss";
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  .search {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+
+    label {
+      margin-right: $spacing-md;
+      font-weight: 600;
+    }
+
+    input {
+      border-radius: $border-radius;
+      color: black;
+      border: none;
+      padding: 4px 6px;
+    }
+
+    input:focus {
+      border: 2px $primary-color solid;
+      outline: none;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      width: 100%;
+      align-items: unset;
+    }
+  }
+}
