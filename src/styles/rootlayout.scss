@@ -1,0 +1,13 @@
+@import "./global.scss";
+
+.root-layout {
+  .header {
+    margin-bottom: $spacing-lg;
+    h1 {
+      color: $primary-color;
+      width: 100%;
+      font-weight: 700;
+      margin-bottom: $spacing-sm;
+    }
+  }
+}

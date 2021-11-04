@@ -1,0 +1,44 @@
+@import "./util.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  color: $text-color;
+}
+
+html {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  padding: $content-inset-lg;
+}
+
+body {
+  width: clamp(0px, 100%, 960px);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  .search {
+    display: flex;
+    align-content: center;
+    font-size: 1.2rem;
+    label {
+      margin-right: $spacing-md;
+      font-weight: 600;
+    }
+    input {
+      border-radius: $border-radius;
+      color: black;
+      border: none;
+      padding: 4px 6px;
+    }
+    input:focus {
+      outline: 2px $primary-color solid;
+    }
+  }
+}
