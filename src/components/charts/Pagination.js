@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import ArrowDoubleLeft from "../../assets/arrow-double-left.svg";
-import ArrowLeft from "../../assets/arrow-left.svg";
-import ArrowRight from "../../assets/arrow-right.svg";
-import ArrowDoubleRight from "../../assets/arrow-double-right.svg";
+import ArrowDoubleLeft from "../../assets/pagination-arrows/arrow-double-left.svg";
+import ArrowLeft from "../../assets/pagination-arrows/arrow-left.svg";
+import ArrowRight from "../../assets/pagination-arrows/arrow-right.svg";
+import ArrowDoubleRight from "../../assets/pagination-arrows/arrow-double-right.svg";
 import "../../styles/charts/pagination.scss";
 
 const Pagination = ({ links, className }) => {
